@@ -30,7 +30,7 @@ export default defineConfig(({ mode }) => {
         remotes: {
           MFE_1: {
             name: "MFE_1",
-            entry: "http://localhost:3001/remoteEntry.js",
+            entry: "",
             type: "module",
             shareScope: "default",
           },
@@ -43,6 +43,10 @@ export default defineConfig(({ mode }) => {
           "react-dom": {
             singleton: true,
             requiredVersion: packageJson.dependencies["react-dom"],
+          },
+          "react-router": {
+            singleton: true,
+            requiredVersion: packageJson.dependencies["react-router"],
           },
         },
         runtimePlugins: ["./src/utils/mfe-plugin.ts"],
