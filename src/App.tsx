@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 
 // @ts-expect-error intented mfe errror
-const ShowCasePage = lazy(() => import("mfe1/Showcase"));
+const ShowCasePage = lazy(() => import("MFE_1/Showcase"));
 
 const App = () => {
   return (

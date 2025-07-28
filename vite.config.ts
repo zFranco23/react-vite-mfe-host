@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react";
 
 import tailwindcss from "@tailwindcss/vite";
 import { federation } from "@module-federation/vite";
-
 import packageJson from "./package.json";
 
 const APP_NAME = "mfe-host";
@@ -29,8 +28,8 @@ export default defineConfig(({ mode }) => {
       federation({
         name: APP_NAME,
         remotes: {
-          mfe1: {
-            name: "mfe1",
+          MFE_1: {
+            name: "MFE_1",
             entry: "http://localhost:3001/remoteEntry.js",
             type: "module",
             shareScope: "default",
@@ -46,6 +45,7 @@ export default defineConfig(({ mode }) => {
             requiredVersion: packageJson.dependencies["react-dom"],
           },
         },
+        runtimePlugins: ["./src/utils/mfe-plugin.ts"],
       }),
     ],
   };
