@@ -19,7 +19,6 @@ export default defineConfig(({ mode }) => {
       target: "esnext",
       minify: false,
       outDir: "dist",
-      cssCodeSplit: false,
     },
     plugins: [
       react(),

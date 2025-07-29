@@ -1,8 +1,6 @@
 import { Outlet } from "react-router";
 import Links from "./links";
 
-import "MFE_1/styles.css"; // TODO: find solution for tailwind 4 scoped css per component
-
 const Layout = () => {
   return (
     <div className="flex flex-col min-h-screen">
