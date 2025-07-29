@@ -1,7 +1,5 @@
-import { lazy, Suspense } from "react";
 import AppRouter from "./router";
 
-// @ts-expect-error intented mfe errror
 // const ShowCasePage = lazy(() => import("MFE_1/Showcase"));
 
 const App = () => {
