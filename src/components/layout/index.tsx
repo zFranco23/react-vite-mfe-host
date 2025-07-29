@@ -1,6 +1,8 @@
 import { Outlet } from "react-router";
 import Links from "./links";
 
+import "MFE_1/styles.css"; // TODO: find solution for tailwind 4 scoped css per component
+
 const Layout = () => {
   return (
     <div className="flex flex-col min-h-screen">
@@ -15,7 +17,9 @@ const Layout = () => {
       <Links />
       <div className="h-full mt-2 max-w-3xl p-4 ml-auto mr-auto w-full">
         <div className="w-full bg-white rounded-lg shadow-lg p-4">
-          <Outlet />
+          <div>
+            <Outlet />
+          </div>
         </div>
       </div>
     </div>

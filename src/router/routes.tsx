@@ -1,6 +1,7 @@
-import type { RouteObject } from "react-router";
 import Layout from "../components/layout";
 import { lazy } from "react";
+
+import type { RouteObject } from "react-router";
 
 const NotFoundPage = lazy(() => import("MFE_1/not-found"));
 
@@ -28,6 +29,8 @@ export const routes: RouteObject[] = [
           const Component = await import("MFE_1/showcase").then(
             (module) => module.default
           );
+
+          console.log("Component", Component);
 
           return { Component };
         },

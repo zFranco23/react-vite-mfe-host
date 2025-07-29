@@ -16,10 +16,10 @@ export default defineConfig(({ mode }) => {
       port,
     },
     build: {
-      minify: false,
       target: "esnext",
-      emptyOutDir: true,
+      minify: false,
       outDir: "dist",
+      cssCodeSplit: false,
     },
     plugins: [
       react(),
@@ -48,6 +48,10 @@ export default defineConfig(({ mode }) => {
             singleton: true,
             requiredVersion: packageJson.dependencies["react-router"],
           },
+          // tailwindcss: {
+          //   singleton: true,
+          //   requiredVersion: packageJson.dependencies["tailwindcss"],
+          // },
         },
         runtimePlugins: ["./src/utils/mfe-plugin.ts"],
       }),
